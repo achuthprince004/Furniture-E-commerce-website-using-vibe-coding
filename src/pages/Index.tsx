@@ -1,13 +1,14 @@
-
 import { useState } from "react";
 import { ShoppingCart, Menu, X, Star, ArrowRight, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartItems, setCartItems] = useState(0);
+  const [cartItems, setCartItems] = useState(3); // Initialize with 3 items to show in cart
 
   const addToCart = () => {
     setCartItems(prev => prev + 1);
@@ -95,7 +96,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-stone-50 font-acid">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,7 +115,10 @@ const Index = () => {
             </nav>
 
             <div className="flex items-center space-x-4">
-              <button className="relative p-2 text-stone-700 hover:text-amber-900 transition-colors">
+              <button 
+                className="relative p-2 text-stone-700 hover:text-amber-900 transition-colors"
+                onClick={() => navigate('/cart')}
+              >
                 <ShoppingCart className="h-6 w-6" />
                 {cartItems > 0 && (
                   <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-amber-900">
