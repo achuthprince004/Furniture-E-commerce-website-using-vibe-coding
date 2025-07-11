@@ -107,11 +107,11 @@ const Index = () => {
             </div>
             
             <nav className="hidden md:flex space-x-8">
-              <a href="#home" className="text-stone-700 hover:text-amber-900 transition-colors font-medium">Home</a>
-              <a href="#services" className="text-stone-700 hover:text-amber-900 transition-colors font-medium">Services</a>
-              <a href="#portfolio" className="text-stone-700 hover:text-amber-900 transition-colors font-medium">Portfolio</a>
-              <a href="#about" className="text-stone-700 hover:text-amber-900 transition-colors font-medium">About</a>
-              <a href="#contact" className="text-stone-700 hover:text-amber-900 transition-colors font-medium">Contact</a>
+              <button className="text-amber-900 font-medium">Home</button>
+              <button onClick={() => navigate('/services')} className="text-stone-700 hover:text-amber-900 transition-colors font-medium">Services</button>
+              <button onClick={() => navigate('/portfolio')} className="text-stone-700 hover:text-amber-900 transition-colors font-medium">Portfolio</button>
+              <button onClick={() => navigate('/about')} className="text-stone-700 hover:text-amber-900 transition-colors font-medium">About</button>
+              <button onClick={() => navigate('/contact')} className="text-stone-700 hover:text-amber-900 transition-colors font-medium">Contact</button>
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -141,11 +141,11 @@ const Index = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <div className="px-4 py-2 space-y-2">
-              <a href="#home" className="block py-2 text-stone-700 hover:text-amber-900">Home</a>
-              <a href="#services" className="block py-2 text-stone-700 hover:text-amber-900">Services</a>
-              <a href="#portfolio" className="block py-2 text-stone-700 hover:text-amber-900">Portfolio</a>
-              <a href="#about" className="block py-2 text-stone-700 hover:text-amber-900">About</a>
-              <a href="#contact" className="block py-2 text-stone-700 hover:text-amber-900">Contact</a>
+              <button className="block py-2 text-amber-900 font-medium w-full text-left">Home</button>
+              <button onClick={() => navigate('/services')} className="block py-2 text-stone-700 hover:text-amber-900 w-full text-left">Services</button>
+              <button onClick={() => navigate('/portfolio')} className="block py-2 text-stone-700 hover:text-amber-900 w-full text-left">Portfolio</button>
+              <button onClick={() => navigate('/about')} className="block py-2 text-stone-700 hover:text-amber-900 w-full text-left">About</button>
+              <button onClick={() => navigate('/contact')} className="block py-2 text-stone-700 hover:text-amber-900 w-full text-left">Contact</button>
             </div>
           </div>
         )}
@@ -158,7 +158,7 @@ const Index = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <p className="text-amber-800 font-medium tracking-wide uppercase text-sm">Desktop Design</p>
-                <h1 className="text-4xl md:text-6xl font-bold text-stone-900 leading-tight">
+                <h1 className="text-5xl md:text-7xl font-bold text-stone-900 leading-tight">
                   LINORA
                 </h1>
                 <p className="text-lg text-stone-600 max-w-md leading-relaxed">
@@ -195,7 +195,7 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Featured Collection</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-4">Featured Collection</h2>
             <p className="text-stone-600 max-w-2xl mx-auto">
               Discover our handpicked selection of premium furniture pieces designed to transform your space.
             </p>
@@ -243,7 +243,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-amber-800 font-medium tracking-wide uppercase text-sm mb-4">Our Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">OUR<br />SERVICES</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-4">OUR<br />SERVICES</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -273,7 +273,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-amber-800 font-medium tracking-wide uppercase text-sm mb-4">About Company</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-6">ABOUT<br />COMPANY</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-6">ABOUT<br />COMPANY</h2>
               <p className="text-stone-600 mb-8 leading-relaxed">
                 With over a decade of experience in interior design and furniture crafting, LINORA has established itself as a premier destination for luxury home and office furnishing. Our commitment to quality, innovation, and customer satisfaction drives everything we do.
               </p>
@@ -325,7 +325,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-amber-800 font-medium tracking-wide uppercase text-sm mb-4">Our Portfolio</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">OUR<br />PORTFOLIO</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-4">OUR<br />PORTFOLIO</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -351,7 +351,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 bg-amber-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">CREATING<br />A COZY<br />INTERIOR</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">CREATING<br />A COZY<br />INTERIOR</h2>
           <p className="text-xl mb-8 opacity-90">+1 (310) 456-7894</p>
           <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-amber-900">
             Get Started Today
