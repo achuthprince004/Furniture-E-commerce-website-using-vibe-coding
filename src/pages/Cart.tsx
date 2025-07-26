@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Minus, Plus, X, ArrowLeft, ShoppingBag, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,35 +17,41 @@ interface CartItem {
 
 const Cart = () => {
   const navigate = useNavigate();
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    {
-      id: 1,
-      name: "Modern Sofa Set",
-      price: 1299,
-      originalPrice: 1599,
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop",
-      quantity: 1,
-      category: "Living Room"
-    },
-    {
-      id: 2,
-      name: "Elegant Dining Table",
-      price: 899,
-      originalPrice: 1199,
-      image: "https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop",
-      quantity: 1,
-      category: "Dining Room"
-    },
-    {
-      id: 3,
-      name: "Luxury Armchair",
-      price: 649,
-      originalPrice: 849,
-      image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=300&h=300&fit=crop",
-      quantity: 2,
-      category: "Living Room"
+  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      return JSON.parse(savedCart);
     }
-  ]);
+    return [
+      {
+        id: 1,
+        name: "Modern Sofa Set",
+        price: 1299,
+        originalPrice: 1599,
+        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=300&fit=crop",
+        quantity: 1,
+        category: "Living Room"
+      },
+      {
+        id: 2,
+        name: "Elegant Dining Table",
+        price: 899,
+        originalPrice: 1199,
+        image: "https://images.unsplash.com/photo-1549497538-303791108f95?w=300&h=300&fit=crop",
+        quantity: 1,
+        category: "Dining Room"
+      },
+      {
+        id: 3,
+        name: "Luxury Armchair",
+        price: 649,
+        originalPrice: 849,
+        image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=300&h=300&fit=crop",
+        quantity: 2,
+        category: "Living Room"
+      }
+    ];
+  });
 
   const updateQuantity = (id: number, newQuantity: number) => {
     if (newQuantity <= 0) {
@@ -60,8 +66,16 @@ const Cart = () => {
   };
 
   const removeItem = (id: number) => {
-    setCartItems(items => items.filter(item => item.id !== id));
+    setCartItems(items => {
+      const newItems = items.filter(item => item.id !== id);
+      localStorage.setItem('cart', JSON.stringify(newItems));
+      return newItems;
+    });
   };
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const shipping = 49;
