@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# 🛋️ Comfy Corner – Furniture E-Commerce Website
 
-## Project info
+Welcome to **Comfy Corner**, a stylish and modern e-commerce furniture store built using vibe coding. This project replicates a real-world shopping experience, showcasing clean UI, functional flows, and responsive design – perfect for aspiring full-stack or product designers.
 
-**URL**: https://lovable.dev/projects/c0e56307-f48f-409f-ae4f-fbb6a9d589ae
+🔗 **Live Preview**: [Click here to view the site](https://preview--comfy-corner-replica.lovable.app/)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📌 Features
 
-**Use Lovable**
+- 🛍️ Home, Shop, Product Detail & Cart Pages
+- 🔍 Smooth navigation with clear product layouts
+- 📱 Fully responsive across devices
+- 🎨 Aesthetic design inspired by modern DTC furniture brands
+- 🧱 Built without code using **Vibe Coding**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c0e56307-f48f-409f-ae4f-fbb6a9d589ae) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+- **No-code Platform**: Vibe Coding
+- **Frontend**: Auto-generated via Vibe UI builder
+- **Hosting**: Lovable Preview (Vibe platform default)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🎯 Why This Project?
 
-Follow these steps:
+This project was created to:
+- Practice building real-world e-commerce flows
+- Showcase end-to-end product UX using no-code tools
+- Explore design systems in retail environments
+- Demonstrate interest in product design & commerce tech
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🙌 Author
 
-# Step 3: Install the necessary dependencies.
-npm i
+**Achuth Akilesh**  
+Product Designer & Data Analyst  
+🌐 [Portfolio Website](https://madebyachuth.framer.website/)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 📬 Feedback & Collaboration
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Got ideas, feedback, or want to collaborate? Open an issue or drop me a message. Always up for cool side projects 🚀
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c0e56307-f48f-409f-ae4f-fbb6a9d589ae) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
